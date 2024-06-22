@@ -1,0 +1,12 @@
+# Modeling Mobile Agents in Conway's Game of Life
+## Ana Espeleta and Christian Lentz, Macalester College Department of Mathematics, Statistics and Computer Science 
+### Introduction to Artificial Intelligence, Fall 2023
+
+#### Description
+This respository incldues code written from September to December of 2023 for the Introduction to AI capstone at Macalester College. Here, we implement a genetic algorithm which evalutes randomly generated sees within Conway's Game of Life with a goal of evolving seeds which are fit with respect to directed/linear movement. We model our algorithm based on the work of [Peter D. Turney](https://github.com/pdturney/modeling-symbiosis-revised). Specifically, we use a tiered system of crossover, including asexual, sexual and symbiotic. For more specifics on our work, see this [this paper](IntroToAI_paper.pdf). 
+
+#### Running this Project
+If you wish to run this project on your local machine, open a terminal and navigate the src folder at the root directory of this repositry. There are three ways to run this project: simulation mode, data mode and save mode. To run in the simulation mode, simply run **python RunSim.py --sim** in your terminal. If this does not work, you may need to run **python3 RunSim.py**. Simulation mode will include a front end in matplotlib which animates each seed as we evaulte fitness and evolve the population. To run in data mode, run **python RunSim.py --data** in your terminal. Data mode will run without the front end, and will print a graphical summary using matplot lib at the conclusion of the simulation. To run in save mode run, **python RunSim.py --save** in your terminal. Save mode will run without the front end, and will save a gif of the most fit seed at the end of the evolution. Note that each mode of execution will print updates in the console as the algorithm proceeds, as well as a summary of the most fit seed and average population fitness at the end of the evolution. 
+
+#### Other Files
+There are two other important files in this repository besides *RunSim.py*, including *TileAgent.py* and *GeneticAlg.py*. The first defines a seed object and functions for evaluating fitness of seeds and mutating seeds. The latter defines the various crossover techniques which we use in our GA, along with necessary helper functions, such as the well-known *roulette-selection*. You will not need to run any of these files, but can find further documentation within each. 
